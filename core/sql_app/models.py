@@ -16,9 +16,9 @@ class Player(Base):
     id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String(255))
     last_name = Column(String(255), index=True)
-    birth_date = Column(Date)
-    weight = Column(Float)
-    height = Column(Float)
+    age = Column(Integer, nullable=False)
+    weight = Column(Integer)
+    height = Column(Integer)
     position = Column(String(255))
     team_name = Column(String(255), ForeignKey("teams.name"))
 
